@@ -1,11 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Patient Satisfaction Survey</h1>
+        <p id="description" class="description text-center">
+          We would like to know what you think about the services Planet Healthcare Center provides, so we can make sure we are meeting your needs and improve our work. All responses will remain confidential. Thank you for your time!
+        </p>
+      </header>
   </head>
   <body>
-    <h1 id="title">Some Survey Here</h1>
-
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="form-control"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          placeholder="Enter you Email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="10"
+          max="99"
+          class="form-control"
+          placeholder="Age"
+        />
+      </div>
+      <header class="header">
+        <h2 id="subtitle" class="text-center">Ease of getting care</h2>
+      </header>
+      <div class="form-group">
+        <p>How long did the responses to your phone calls take?</p>
+        <select id="dropdown" name="response-time" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="more">More than I would like</option>
+          <option value="about-right">About right</option>
+          <option value="less">Less than I would like</option>
+        </select>
+        <p>How quickly did you get an appointment?</p>
+        <select id="dropdown" name="app-time" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="much-quicker">Much quicker than I expected</option>
+          <option value="quicker">Quicker than I expected</option>
+          <option value="as-quick">As quick as I expected</option>
+          <option value="slower">Slower than I expected</option>
+          <option value="much-slower">Much slower than I expected</option>
+        </select>
+        <p>Are health center's working hours convenient for you?</p>
+        <select id="dropdown" name="working-hours" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="extremely">Extremely convenient</option>
+          <option value="somewhat">Somewhat convenient</option>
+          <option value="neither">Neither convenient nor inconvenient</option>
+          <option value="somewhat-in">Somewhat inconvenient</option>
+          <option value="extremely-in">Extremely inconvenient</option>
+        </select>
+      </div>
+      <header class="header">
+        <h2 id="subtitle" class="text-center">Waiting time</h2>
+      </header>
+      <div class="form-group">
+        <p>Was the time in the waiting room what you expected?</p>
+        <label>
+          <input
+            type="radio"
+            name="time-waiting"
+            value="more-than"
+            class="input-radio"
+            checked
+          />More than I expected</label>
+        <label>
+          <input
+            type="radio"
+            name="time-waiting"
+            value="about-right"
+            class="input-radio"
+          />About right</label>
+        <label>
+          <input
+            type="radio"
+            name="time-waiting"
+            value="less-than"
+            class="input-radio"
+          />Less than I expected</label>
+        <p>Was the time in the exam room what you expected?</p>
+        <label>
+          <input
+            type="radio"
+            name="time-exam"
+            value="more-than"
+            class="input-radio"
+            checked
+          />More than I expected</label>
+        <label>
+          <input
+            type="radio"
+            name="time-exam"
+            value="about-right"
+            class="input-radio"
+          />About right</label>
+        <label>
+          <input
+            type="radio"
+            name="time-exam"
+            value="less-than"
+            class="input-radio"
+          />Less than I expected</label>
+      </div>
+      <header class="header">
+        <h2 id="subtitle" class="text-center">Staff and Medical provider</h2>
+      </header>
+      <div class="form-group">
+        <p>How would you rate the communication with your medical provider, in terms of having your concerns heard and questions answered?</p>
+        <select id="dropdown" name="concerns-heard" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="excellent">Excellent</option>
+          <option value="above-average">Above average</option>
+          <option value="average">Average</option>
+          <option value="below-average">Below average</option>
+          <option value="very-poor">Very poor</option>
+        </select>
+        <p>How would you rate the communication with your medical provider in terms of being informed about all the details of your condition/procedure/exam?</p>
+        <select id="dropdown" name="informed" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="excellent">Excellent</option>
+          <option value="above-average">Above average</option>
+          <option value="average">Average</option>
+          <option value="below-average">Below average</option>
+          <option value="very-poor">Very poor</option>
+        </select>
+        <p>Was your medical provider friendly and respectful towards you?</p>
+        <select id="dropdown" name="friendly" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="strongly-agree">Strongly agree</option>
+          <option value="agree">Agree</option>
+          <option value="neither">Neither agree nor disagree</option>
+          <option value="disagree">disagree</option>
+          <option value="strongly-disagree">Strngly disagree</option>
+        </select>
+        <p>Did your medical provider verify your personal information before performing an exam?</p>
+        <select id="dropdown" name="personal-info" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="not-sure">I am not sure</option>
+        </select>
+      </div>
+      <header class="header">
+        <h2 id="subtitle" class="text-center">Your feedback is very important to us!</h2>
+        <div class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+          <label>
+            <input
+              name="prefer"
+              value="ease-of-getting-care"
+              type="checkbox"
+              class="input-checkbox"
+            />Ease of getting care</label>
+          <label>
+            <input
+              name="prefer"
+              value="waiting-time"
+              type="checkbox"
+              class="input-checkbox"
+            />Waiting time</label>
+          <label>
+            <input
+              name="prefer"
+              value="staff-and-medical-provider"
+              type="checkbox"
+              class="input-checkbox"
+            />Staff and Medical provider</label>
+        </div>
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button"/>
+          Submit
+          </button>
+        </div>
+    </form>
   </body>
-
+  <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>
